@@ -3,7 +3,10 @@ const app = new Express();
 
 app.get('/auth0/callback', (req, res) => {
     const state = req.query.state;
-    res.json(`state:${state}`);
+    res.json({
+        state: req.query.state,
+        query: req.query
+    });
 });
 app.get('/', (req, res) => {
     res.json('i am here!');
