@@ -8,7 +8,7 @@ app.get('/auth0/callback', (req, res) => {
     //     state: req.query.state,
     //     query: req.query
     // });
-    res.redirect('http://localhost:3000/callback')
+    res.redirect('http://35.229.110.131:3000/callback')
 });
 app.get('/', (req, res) => {
     res.json('i am here!');
